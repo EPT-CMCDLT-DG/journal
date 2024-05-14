@@ -9,10 +9,77 @@
         background-color: black; /* Establece el color de fondo negro */
         margin: 0; /* Elimina los márgenes predeterminados */
         overflow: hidden; /* Evita que el contenido se desplace */
+        font-family: 'Abril Fatface', cursive; /* Establece la fuente */
+        display: flex; /* Utiliza flexbox */
+        justify-content: center; /* Centra horizontalmente los elementos */
+        align-items: center; /* Centra verticalmente los elementos */
+        height: 100vh; /* Ocupa el 100% de la altura de la ventana */
     }
+    .square {
+        position: relative; /* Establece posición relativa */
+        width: 280px; /* Ancho del recuadro */
+        height: 280px; /* Altura del recuadro */
+        margin: 24px; /* Espacio entre los cuadrados */
+        border: 5px solid white; /* Borde de 5px sólido blanco */
+        box-sizing: border-box; /* Incluye el borde en el tamaño total */
+    }
+    .square-image {
+        position: absolute; /* Establece posición absoluta */
+        top: 0; /* Alinea la imagen arriba */
+        left: 0; /* Alinea la imagen a la izquierda */
+        width: 100%; /* Ancho del cuadro */
+        height: 100%; /* Altura del cuadro */
+        background-size: cover; /* Ajusta la imagen al tamaño del cuadro sin estirarla */
+        background-position: center; /* Centra la imagen de fondo */
+        image-rendering: pixelated; /* Renderizado pixelado */
+    }
+    .square-image.revista {
+        background-image: url('https://lh3.bunny.novaskin.me/Oul-R2qhWajzXZbQWkv9vgDXoEQOJqEl43oBFRdbRVnmX-4gug91rfZwRP4G6iQfryY05m_zUxJQhTkE58PydB0'); /* URL de la imagen de fondo para "REVISTA" */
+        filter: brightness(70%); /* Reducción del brillo al 70% */
+    }
+    .square-image.biografia {
+        background-image: url('https://static.vecteezy.com/system/resources/previews/004/933/932/non_2x/pixel-gradient-background-illustration-vector.jpg'); /* URL de la imagen de fondo para "BIOGRAFÍA" */
+    	filter: brightness(80%)
+    }
+    .square-image.nosotros {
+        background-image: url('https://static.vecteezy.com/system/resources/previews/005/332/501/non_2x/green-and-red-colors-pixelate-wallpaper-contrast-color-background-free-vector.jpg'); /* URL de la imagen de fondo para "SOBRE NOSOTROS" */
+    }
+    .texto-girado {
+        position: absolute; /* Establece posición absoluta */
+        top: 50%; /* Alinea el texto al centro vertical */
+        left: 50%; /* Alinea el texto al centro horizontal */
+        transform: translate(-50%, -50%) rotate(45deg); /* Centra y rota el texto */
+        text-align: center; /* Alinea el texto */
+        text-transform: uppercase; /* Texto en mayúsculas */
+        font-size: 200%; /* Tamaño del texto aumentado un 30% */
+        color: white; /* Color del texto */
+    }
+    .button {
+        display: block; /* Convertir el elemento en bloque */
+        width: 100%; /* Ancho completo */
+        height: 100%; /* Altura completa */
+        position: relative; /* Establecer posición relativa */
+        text-decoration: none; /* Quitar subrayado */
+    }
+</style>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
 </style>
 </head>
 <body>
+
+<a href="revista.html" class="square">
+    <div class="square-image revista"></div>
+    <span class="texto-girado">REVISTA</span>
+</a>
+<a href="biografia.html" class="square">
+    <div class="square-image biografia"></div>
+    <span class="texto-girado">BIOGRAFÍA</span>
+</a>
+<a href="sobre-nosotros.html" class="square">
+    <div class="square-image nosotros"></div>
+    <span class="texto-girado">SOBRE NOSOTROS</span>
+</a>
 
 <!-- Aquí puedes colocar el contenido de tu página -->
 
