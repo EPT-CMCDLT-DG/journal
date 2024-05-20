@@ -1,18 +1,49 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const sections = document.querySelectorAll('.rotating-text > *');
+    const sections = document.querySelectorAll('.section');
     let currentIndex = 0;
 
-    function rotateText() {
-        sections[currentIndex].style.display = 'none';
-        currentIndex = (currentIndex + 1) % sections.length;
-        sections[currentIndex].style.display = 'block';
+    function showSection(index) {
+        sections.forEach((section, i) => {
+            section.classList.toggle('active', i === index);
+        });
+        updateButtons();
     }
 
-    sections.forEach((section, index) => {
-        if (index !== 0) {
-            section.style.display = 'none';
-        }
+    function updateButtons() {
+        sections.forEach((section, i) => {
+            const prevButton = section.querySelector('.prev');
+            const nextButton = section.querySelector('.next');
+            if (prevButton) prevButton.style.display = (i === 0) ? 'none' : 'inline-block';
+            if (nextButton) nextButton.style.display = (i === sections.length - 1) ? 'none' : 'inline-block';
+        });
+    }
+
+    document.querySelectorAll('.next').forEach(button => {
+        button.addEventListener('click', () => {
+            if (currentIndex < sections.length - 1) {
+                currentIndex++;
+                showSection(currentIndex);
+            }
+        });
     });
 
-    setInterval(rotateText, 7000);
+    document.querySelectorAll('.prev').forEach(button => {
+        button.addEventListener('click', () => {
+            if (currentIndex > 0) {
+                currentIndex--;
+                showSection(currentIndex);
+            }
+        });
+    });
+
+    showSection(currentIndex);
+
+    window.addEventListener('DOMContentLoaded', () => {
+        const header = document.querySelector('.scrolling-text');
+        const headerWidth = header.offsetWidth;
+        const bodyWidth = document.body.offsetWidth;
+        const animationDuration = (headerWidth + bodyWidth) / 100; // Ajusta la velocidad según el ancho del texto y del body
+
+        header.style.animationDuration = `${animationDuration}s`;
+    });
 });
