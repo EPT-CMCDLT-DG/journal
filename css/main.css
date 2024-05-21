@@ -30,16 +30,21 @@ body {
 .scrolling-text {
     white-space: nowrap;
     font-weight: bold;
-    font-size: 1.2em;
+    font-size: 1.6em;
     color: black; /* Texto negro */
-    animation: scrollText 3s linear infinite; /* Ajusta la duración a 3 segundos */
-    padding-left: 0; /* Cambia el estado inicial para que aparezca inmediatamente */
+    animation: scrollText 30s linear infinite; /* Ajusta la duración a 30 segundos */
+    transform: translateX(0%); /* Posición inicial fuera de la ventana */
+    backface-visibility: hidden; /* Evita el parpadeo durante la animación */
 }
 
 @keyframes scrollText {
-    0% { transform: translateX(-100%); } /* Cambia el estado inicial */
-    100% { transform: translateX(100%); } /* Termina fuera del header */
+    0% { transform: translateX(-100%); } /* Posición inicial fuera de la ventana */
+    100% { transform: translateX(100%); } /* Posición final fuera de la ventana */
+    101% { transform: translateX(0%); } /* Regresa a la posición inicial */
 }
+
+
+
 
 .container {
     width: 80%;

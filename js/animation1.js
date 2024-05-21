@@ -40,10 +40,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
     window.addEventListener('DOMContentLoaded', () => {
         const header = document.querySelector('.scrolling-text');
-        const headerWidth = header.offsetWidth;
-        const bodyWidth = document.body.offsetWidth;
-        const animationDuration = (headerWidth + bodyWidth) / 100; // Ajusta la velocidad según el ancho del texto y del body
-
-        header.style.animationDuration = `${animationDuration}s`;
+    const animationDuration = 30; // Duración fija en segundos
+    const headerWidth = header.offsetWidth;
+    // Establece la duración de la animación
+    header.style.animationDuration = `${animationDuration}s`;
+    // Calcula el tiempo de espera antes de que la animación comience
+    const delay = headerWidth / (headerWidth + document.body.offsetWidth) * animationDuration;
+    // Establece el tiempo de inicio de la animación
+    header.style.animationDelay = `-${delay}s`;
     });
 });
