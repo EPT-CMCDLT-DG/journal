@@ -32,7 +32,7 @@ body {
     font-weight: bold;
     font-size: 1.2em;
     color: black; /* Texto negro */
-    animation: scrollText 5s linear infinite; /* Ajusta la duración a 5 segundos */
+    animation: scrollText 3s linear infinite; /* Ajusta la duración a 3 segundos */
     padding-left: 0; /* Cambia el estado inicial para que aparezca inmediatamente */
 }
 
