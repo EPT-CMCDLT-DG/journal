@@ -10,59 +10,100 @@
     color: white;
     font-family: "Times New Roman", Times, serif;
     padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centra los cuadros horizontalmente */
+    gap: 20px; /* Espacio entre los cuadros */
   }
   h1 {
     font-weight: bold;
     text-align: center;
+    width: 100%; /* Asegura que ocupe todo el ancho */
   }
   h2 {
     font-weight: bold;
   }
   p {
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  .author-box {
+    border: 2px solid white;
+    width: calc(50% - 20px); /* Ancho para dos columnas con margen */
+    padding: 20px; /* Espacio interno */
+    box-sizing: border-box; /* Incluye el borde en el cálculo del ancho */
+    text-align: center; /* Centra el contenido dentro del cuadro */
+    color: white; /* Color del texto */
+    text-decoration: none; /* Quita el subrayado de los enlaces */
+    transition: color 0.3s, background-color 0.3s; /* Transición suave */
+  }
+  .author-box:hover {
+    background-color: white; /* Cambia el color de fondo al pasar el mouse */
+    color: black; /* Cambia el color del texto al pasar el mouse */
+  }
+  .author-image {
+    width: 100px; /* Ancho de la imagen */
+    height: auto; /* Altura automática para mantener la proporción */
+    object-fit: cover; /* Recorta la imagen para que se ajuste */
+    display: block; /* Elimina el espacio extra debajo de la imagen */
+    margin: 0 auto 10px; /* Centra la imagen y añade margen inferior */
+  }
+  .author-info {
+    overflow: hidden; /* Evita que el texto se desborde */
+  }
+  .author-name {
+    font-size: 18px; /* Tamaño del nombre del autor */
+    margin-top: 0; /* Elimina el margen superior */
+    margin-bottom: 5px; /* Margen inferior */
+  }
+  .author-description {
+    margin-top: 0; /* Elimina el margen superior */
+    font-size: 14px; /* Tamaño de la descripción */
   }
 </style>
 </head>
 <body>
-<h1>Obras de Mario Vargas Llosa</h1>
-<h2>1. LA CIUDAD Y LOS PERROS (1963)</h2>
-<p>Esta novela, galardonada con el Premio Biblioteca Breve en 1962, explora la vida en la militarizada y opresiva escuela militar Leoncio Prado en Lima, Perú. A través de una narrativa intensa y multifacética, Vargas Llosa presenta un retrato crítico de la sociedad peruana y de la masculinidad en un entorno marcado por la violencia y la corrupción.</p>
+<h1>Autores y sus Obras</h1>
 
-<h2>2. LA CASA VERDE (1966)</h2>
-<p>Ambientada en la selva amazónica peruana, esta novela entrelaza múltiples historias y personajes, desde prostitutas hasta sacerdotes y militares. La Casa Verde, un burdel en Tarapoto, sirve como punto focal para explorar temas como el deseo, la redención y la búsqueda de la identidad en un entorno hostil y complejo.</p>
+<a href="mario.html" class="author-box" id="vargas-llosa">
+  <img class="author-image" src="./img/mario.jpg" alt="Mario Vargas Llosa">
+  <div class="author-info">
+    <h2 class="author-name">Mario Vargas Llosa</h2>
+    <p class="author-description">Autor peruano famoso por su narrativa.</p>
+  </div>
+</a>
 
-<h2>3. CONVERSACIÓN EN LA CATEDRAL (1969)</h2>
-<p>Considerada una de las obras maestras de Vargas Llosa, esta novela se desarrolla en el caótico escenario de un bar llamado La Catedral en Lima durante el gobierno de Manuel A. Odría. A través de una conversación entre dos personajes, Santiago Zavala y Ambrosio, Vargas Llosa teje una intrincada trama que aborda temas como la corrupción política, la alienación y la búsqueda de sentido en una sociedad desintegrada.</p>
+<a href="sergio.html" class="author-box" id="bambarén">
+  <img class="author-image" src="./img/sergio.jpg" alt="Sergio Bambarén Roggero">
+  <div class="author-info">
+    <h2 class="author-name">Sergio Bambarén Roggero</h2>
+    <p class="author-description">Escritor cuyas historias nos llevan al océano.</p>
+  </div>
+</a>
 
-<h2>4. PANTALEÓN Y LAS VISITADORAS (1973)</h2>
-<p>Esta sátira cómica sigue las desventuras de Pantaleón Pantoja, un capitán del ejército peruano encargado de organizar un servicio de prostitutas para satisfacer las necesidades sexuales de los soldados en zonas remotas. A través de situaciones hilarantes y absurdas, Vargas Llosa critica la hipocresía y la corrupción en las instituciones militares y gubernamentales.</p>
+<a href="jose.html" class="author-box" id="arguedas">
+  <img class="author-image" src="./img/jose.jpg" alt="José María Arguedas">
+  <div class="author-info">
+    <h2 class="author-name">José María Arguedas</h2>
+    <p class="author-description">Explorador de la identidad peruana a través de su escritura.</p>
+  </div>
+</a>
 
-<h2>5. LA TÍA JULIA Y EL ESCRIBIDOR (1977)</h2>
-<p>Esta novela semiautobiográfica narra la historia de un joven llamado Marito que se enamora de su tía política, Julia, una mujer diez años mayor que él y una exitosa locutora de radio. Ambientada en el Lima de los años 50, la novela combina elementos de comedia romántica con reflexiones sobre la pasión, la escritura y la búsqueda de la identidad.</p>
+<a href="cesar.html" class="author-box" id="vallejo">
+  <img class="author-image" src="./img/cesar.jpg" alt="César Abraham Vallejo Mendoza">
+  <div class="author-info">
+    <h2 class="author-name">César Abraham Vallejo Mendoza</h2>
+    <p class="author-description">Poeta y escritor peruano, una de las figuras más importantes de la poesía del siglo XX.</p>
+  </div>
+</a>
 
-<h2>6. LA GUERRA DEL FIN DEL MUNDO (1981)</h2>
-<p>Inspirada en hechos históricos reales, esta novela épica recrea la revuelta de Canudos en Brasil a fines del siglo XIX, liderada por el líder mesiánico Antonio Conselheiro. A través de una narrativa épica y trágica, Vargas Llosa examina temas como el fanatismo religioso, la violencia política y la lucha por la libertad en un contexto de conflictos sociales y culturales.</p>
+<a href="josecarlos.html" class="author-box" id="mariategui">
+  <img class="author-image" src="./img/josem.jpg" alt="José Carlos Mariátegui La Chira">
+  <div class="author-info">
+    <h2 class="author-name">José Carlos Mariátegui La Chira</h2>
+    <p class="author-description">Escritor, periodista y pensador marxista peruano, fundador del socialismo peruano.</p>
+  </div>
+</a>
 
-<h1>Obras de Sergio Bambarén Roggero</h1>
-<h2>1. EL DELFÍN LA HISTORIA DE UN SOÑADOR</h2>
-<p>Esta obra cuenta la historia de Daniel Alexander Dolphin, un delfín joven y valiente que se embarca en un viaje de auto-descubrimiento y aventuras en el vasto océano. A través de encuentros con otras criaturas marinas y desafíos emocionantes, Daniel aprende lecciones sobre el coraje, la amistad y la importancia de seguir tus sueños.</p>
-
-<h2>2. PENSAMIENTOS A LA ORILLA DEL MAR</h2>
-<p>En este libro, Bambarén comparte una colección de reflexiones inspiradoras y meditaciones sobre la vida, el amor, la naturaleza y la espiritualidad, todo ello mientras se contempla el vasto horizonte del mar. Las palabras del autor invitan a los lectores a encontrar paz y serenidad en la belleza y la inmensidad del océano.</p>
-
-<h2>3. VELA BLANCA</h2>
-<p>Esta novela transporta a los lectores a las costas de Perú, donde un joven llamado Miguel descubre su pasión por la navegación y se embarca en una emocionante aventura en alta mar a bordo de un velero llamado Vela Blanca. A medida que Miguel enfrenta desafíos y peligros, aprende valiosas lecciones sobre el coraje, la determinación y el poder de los sueños.</p>
-
-<h2>4. LA PLAYA DE LOS SUEÑOS</h2>
-<p>En esta obra, Bambarén nos lleva a una hermosa y misteriosa playa donde los sueños se hacen realidad. A través de la historia de un grupo de personajes que llegan a esta playa en busca de respuestas y redención, el autor explora temas como la esperanza, la sanación emocional y la búsqueda de significado en un mundo turbulento.</p>
-
-<h2>5. IRIS (2000)</h2>
-<p>Esta novela cuenta la historia de Iris, una joven que vive en un pequeño pueblo costero y sueña con explorar el mundo más allá del mar. Con el coraje y la determinación como sus únicas compañeras, Iris se aventura en un viaje audaz y emocionante hacia lo desconocido, enfrentando desafíos y descubriendo su verdadero destino en el proceso.</p>
-
-<h2>6. SAMANTA</h2>
-<p>En esta conmovedora historia, Bambarén presenta a Samanta,</p>
-
-<h1>Obras de José María Arguedas</h1>
-<h2>1. LOS RÍOS PROFUNDOS (1958)</h2>
-<p>Esta novela es una exploración profunda de la identidad peruana y
+</body>
+</html>
