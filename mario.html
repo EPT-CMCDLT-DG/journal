@@ -1,60 +1,122 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Obras de Mario Vargas Llosa</title>
-    <style>
-        body {
-            background-color: black;
-            color: white;
-            font-family: 'Times New Roman', Times, serif;
-            margin: 0;
-            padding: 0;
-        }
-        h1, h2 {
-            font-weight: bold;
-            font-size: 24px;
-            text-align: left;
-            margin-left: 20px;
-            margin-top: 20px;
-        }
-        p {
-            font-size: 18px;
-            text-align: left;
-            margin-left: 20px;
-            margin-bottom: 10px;
-        }
-        a {
-            color: white;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Biografía y Obras de Mario Vargas Llosa</title>
+<style>
+  body {
+    font-family: "Times New Roman", Times, serif;
+    background-color: #000;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+  }
+  .container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .box {
+    display: none;
+    width: 45%;
+    padding: 20px;
+    border: 2px solid #fff;
+    border-radius: 10px;
+  }
+  .box.active {
+    display: block;
+  }
+  .box h1, .box h2 {
+    font-weight: bold;
+    font-size: 20px;
+  }
+  .box p {
+    font-size: 16px;
+  }
+  #emptyBox {
+    width: 45%;
+    padding: 20px;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    margin-bottom: 20px; /* Espaciado entre el recuadro y los botones */
+  }
+  .button-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+  }
+  .button {
+    display: inline-block;
+    padding: 15px 30px;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    text-decoration: none;
+    background-color: transparent;
+    color: #fff;
+    margin-right: 20px; /* Separación horizontal entre botones */
+  }
+</style>
 </head>
 <body>
-    <h1>Obras de Mario Vargas Llosa</h1>
-    <p><a href="https://www.ebookelo.com/ebook/61191/la-ciudad-y-los-perros">La ciudad y los perros</a> (Seix Barral, 1963), Premio Biblioteca Breve 1962 y Premio de la Crítica de narrativa castellana 1964</p>
-    <p><a href="https://www.ebookelo.com/ebook/54298/la-casa-verde">La casa verde</a> (Seix Barral, 1966), Premio Internacional de Novela Rómulo Gallegos 1967, Premio de la Crítica de Narrativa Castellana 1967 y Premio Nacional de Cultura (Perú) 1967</p>
-    <p><a href="https://www.ebookelo.com/ebook/60947/conversacion-en-la-catedral">Conversación en La Catedral</a> (Seix Barral, 1969)</p>
-    <p><a href="https://www.ebookelo.com/ebook/54294/pantaleon-y-las-visitadoras">Pantaleón y las visitadoras</a> (Seix Barral, 1973)</p>
-    <p><a href="https://www.ebookelo.com/ebook/54292/la-tia-julia-y-el-escribidor">La tía Julia y el escribidor</a> (Seix Barral, 1977)</p>
-    <p><a href="https://www.ebookelo.com/ebook/54290/la-guerra-del-fin-del-mundo">La guerra del fin del mundo</a> (Seix Barral, 1981)</p>
-    <p><a href="https://www.ebookelo.com/ebook/54288/historia-de-mayta">Historia de Mayta</a> (Seix Barral, 1984)</p>
-    <p><a href="https://www.ebookelo.com/ebook/54286/quien-mato-a-palomino-molero">¿Quién mató a Palomino Molero?</a> (Seix Barral, 1986)</p>
-    <p><a href="https://www.ebookelo.com/ebook/54284/el-hablador">El hablador</a> (Seix Barral, 1987)</p>
-    <p><a href="https://www.ebookelo.com/ebook/54282/elogio-de-la-madrastra">Elogio de la madrastra</a> (Tusquets, 1988)</p>
-    <p><a href="https://www.ebookelo.com/ebook/54280/lituma-en-los-andes">Lituma en los Andes</a> (Planeta, 1993), Premio Planeta 1993</p>
-    <p><a href="https://www.ebookelo.com/ebook/54278/los-cuadernos-de-don-rigoberto">Los cuadernos de don Rigoberto</a> (Alfaguara, 1997)</p>
-    <p><a href="https://www.ebookelo.com/ebook/54276/la-fiesta-del-chivo">La fiesta del Chivo</a> (Alfaguara, 2000)</p>
-    <p><a href="https://www.ebookelo.com/ebook/54274/el-paraiso-en-la-otra-esquina">El Paraíso en la otra esquina</a> (Alfaguara, 2003)</p>
-    <p><a href="https://www.ebookelo.com/ebook/54272/travesuras-de-la-nina-mala">Travesuras de la niña mala</a> (Alfaguara, 2006)</p>
-    <p><a href="https://www.ebookelo.com/ebook/54270/el-sueno-del-celta">El sueño del celta</a> (Alfaguara, 2010)</p>
-    <p><a href="https://www.ebookelo.com/ebook/54268/el-heroe-discreto">El héroe discreto</a> (Alfaguara, 2013)</p>
-    <p><a href="https://www.ebookelo.com/ebook/54266/cinco-esquinas">Cinco Esquinas</a> (Alfaguara, 2016)</p>
-    <p><a href="https://www.ebookelo.com/ebook/54264/tiempos-recios">Tiempos recios</a> (Alfaguara, 2019)</p>
-    <p><a href="https://www.ebookelo.com/ebook/54262/le-dedico-mi-silencio">Le dedico mi silencio</a> (Alfaguara, 2023)</p>
+
+<div id="emptyBox">empty</div>
+
+<div class="button-container">
+  <button class="button" onclick="mostrarContenido('biografia')">BIOGRAFÍA</button>
+  <button class="button" onclick="mostrarContenido('obras')">OBRAS LITERARIAS</button>
+</div>
+
+<div class="container">
+  <div class="box" id="biografia">
+    <h1>Biografía de Mario Vargas Llosa</h1>
+    <p>Mario Vargas Llosa nació en Arequipa, Perú, en 1936. Fue el único hijo de Ernesto Vargas Maldonado y Dora Llosa Ureta, quienes se separaron poco antes de su nacimiento y posteriormente se divorciaron. Su padre reveló tener una relación con una mujer alemana, resultando en dos medios hermanos menores del escritor. Por línea materna, desciende del maestre de campo vizcaíno Juan de la Llosa y Llaguno, quien se estableció en Arequipa en 1702.
+Vivió en Arequipa hasta los nueve años, cuando su abuelo se trasladó con la familia a Bolivia. Posteriormente regresaron a Perú, donde continuó sus estudios en Piura y Lima. Su relación con su padre fue complicada y marcó su vida. A los 14 años ingresó al Colegio Militar Leoncio Prado, donde experimentó una férrea disciplina militar que influyó en su desarrollo literario. Comenzó su carrera literaria y periodística a una edad temprana, publicando relatos y trabajando como periodista en diversos medios. Estudió Derecho y Literatura en la Universidad Nacional Mayor de San Marcos, participando activamente en la política estudiantil. En 1955 contrajo matrimonio por primera vez y comenzó a escribir de forma seria.
+En 1960 se trasladó a Francia, donde escribió su primera novela, "La ciudad y los perros". Durante esta época, se involucró en la política y simpatizó inicialmente con la revolución cubana. Sin embargo, se distanció del régimen cubano en 1967.
+En 1971 obtuvo un doctorado en Filosofía y Letras en la Universidad Complutense de Madrid. A lo largo de su carrera, ha recibido numerosos premios y reconocimientos, incluido el Premio Miguel de Cervantes en 1994. Vargas Llosa ha sido miembro de la Real Academia Española y ha ejercido como periodista deportivo durante el Mundial de Fútbol de 1982. Se ha casado en dos ocasiones y tiene varios hijos. En 2019 anunció su retiro del PEN Club Internacional debido a su postura sobre el independentismo catalán.
+El 17 de diciembre de 2023, publicó su última columna, anunciando su retiro oficial del periodismo.</p>
+  </div>
+  <div class="box" id="obras">
+    <h2>Obras Literarias de Mario Vargas Llosa</h2>
+    <ul>
+      <li>La ciudad y los perros (Seix Barral, 1963), Premio Biblioteca Breve 1962 y Premio de la Crítica de narrativa castellana 1964</li>
+      <li>La casa verde (Seix Barral, 1966), Premio Internacional de Novela Rómulo Gallegos 1967, Premio de la Crítica de Narrativa Castellana 1967 y Premio Nacional de Cultura (Perú) 1967</li>
+      <li>Conversación en La Catedral (Seix Barral, 1969)</li>
+      <li>Pantaleón y las visitadoras (Seix Barral, 1973)</li>
+      <li>La tía Julia y el escribidor (Seix Barral, 1977)</li>
+      <li>La guerra del fin del mundo (Seix Barral, 1981)</li>
+      <li>Historia de Mayta (Seix Barral, 1984)</li>
+      <li>¿Quién mató a Palomino Molero? (Seix Barral, 1986)</li>
+      <li>El hablador (Seix Barral, 1987)</li>
+      <li>Elogio de la madrastra (Tusquets, 1988)</li>
+      <li>Lituma en los Andes (Planeta, 1993), Premio Planeta 1993</li>
+      <li>Los cuadernos de don Rigoberto (Alfaguara, 1997)</li>
+      <li>La fiesta del Chivo (Alfaguara, 2000)</li>
+      <li>El Paraíso en la otra esquina (Alfaguara, 2003)</li>
+      <li>Travesuras de la niña mala (Alfaguara, 2006)</li>
+      <li>El sueño del celta (Alfaguara, 2010)</li>
+      <li>El héroe discreto (Alfaguara, 2013)</li>
+      <li>Cinco Esquinas (Alfaguara, 2016)</li>
+      <li>Tiempos recios (Alfaguara, 2019)</li>
+      <li>Le dedico mi silencio (Alfaguara, 2023)</li>
+    </ul>
+  </div>
+</div>
+
+<script>
+  function mostrarContenido(id) {
+    var emptyBox = document.getElementById("emptyBox");
+    var box = document.getElementById(id);
+    emptyBox.innerHTML = box.innerHTML;
+  }
+</script>
+
 </body>
 </html>
