@@ -1,58 +1,119 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Obras de José Carlos Mariátegui</title>
-    <style>
-        body {
-            background-color: black;
-            color: white;
-            font-family: 'Times New Roman', Times, serif;
-            margin: 0;
-            padding: 0;
-        }
-        h1 {
-            font-weight: bold;
-            font-size: 24px;
-            text-align: left;
-            margin-left: 20px;
-            margin-top: 20px;
-        }
-        p {
-            font-size: 18px;
-            text-align: left;
-            margin-left: 20px;
-            margin-bottom: 10px;
-        }
-        a {
-            color: white;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Biografía y Obras de José Carlos Mariátegui</title>
+<style>
+  body {
+    font-family: "Times New Roman", Times, serif;
+    background-color: #000;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+  }
+  .container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .box {
+    display: none;
+    width: 45%;
+    padding: 20px;
+    border: 2px solid #fff;
+    border-radius: 10px;
+  }
+  .box.active {
+    display: block;
+  }
+  .box h1, .box h2 {
+    font-weight: bold;
+    font-size: 20px;
+  }
+  .box p {
+    font-size: 16px;
+  }
+  #emptyBox {
+    display: inline-block;
+    padding: 20px;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    margin-bottom: 20px; /* Espaciado entre el recuadro y los botones */
+  }
+  .button-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+  }
+  .button {
+    display: inline-block;
+    padding: 15px 30px;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    text-decoration: none;
+    background-color: transparent;
+    color: #fff;
+    margin-right: 20px; /* Separación horizontal entre botones */
+  }
+</style>
 </head>
 <body>
-    <h1>Obras de José Carlos Mariátegui</h1>
-    <p>La escena contemporánea. Obras completas, Vol. 1. Ed. Amauta.</p>
-    <p>7 ensayos de interpretación de la realidad peruana. Obras completas, Vol. 2. Ed. Amauta.</p>
-    <p>El alma matinal y otras estaciones del hombre de hoy. Obras completas, Vol. 3. Ed. Amauta.</p>
-    <p>La novela y la vida. Siegfried y el profesor Canella. Obras completas, Vol. 4. Ed. Amauta.</p>
-    <p>Defensa del marxismo. Obras completas, Vol. 5. Ed. Amauta.</p>
-    <p>El artista y la época. Obras completas, Vol. 6. Ed. Amauta.</p>
-    <p>Signos y obras. Análisis del pensamiento literario contemporáneo. Obras completas, Vol. 7. Ed. Amauta.</p>
-    <p>Historia de la crisis mundial. Conferencias pronunciadas en 1923. Obras completas, Vol. 8. Ed. Amauta.</p>
-    <p>Poemas a Mariátegui (Compilación con prólogo de Pablo Neruda). Obras completas, Vol. 9. Ed. Amauta.</p>
-    <p>José Carlos Mariátegui por María Wiesse. Obras completas, Vol. 10. Ed. Amauta.</p>
-    <p>Peruanicemos al Perú. Obras completas, Vol. 11. Ed. Amauta.</p>
-    <p>Temas de nuestra América. Obras completas, Vol. 12. Ed. Amauta.</p>
-    <p>Ideología y política. Obras completas, Vol. 13. Ed. Amauta.</p>
-    <p>Temas de educación. Obras completas, Vol. 14. Ed. Amauta.</p>
-    <p>Cartas de Italia. Obras completas, Vol. 15. Ed. Amauta.</p>
-    <p>Figuras y aspectos de la vida mundial. Tomos 1, 2 y 3 Obras completas, Vol. 16, 17 y 18. Ed. Amauta.</p>
-    <p>Amauta y su influencia de Alberto Tauro, Obras completas, Vol. 19. Ed. Amauta.</p>
-    <p>Mariátegui y su tiempo por Armando Bazán, Obras completas, Vol. 20. Ed. Amauta.</p>
+
+<div id="emptyBox">empty</div>
+
+<div class="button-container">
+  <button class="button" onclick="mostrarContenido('biografia')">BIOGRAFÍA</button>
+  <button class="button" onclick="mostrarContenido('obras')">OBRAS LITERARIAS</button>
+</div>
+
+<div class="container">
+  <div class="box" id="biografia">
+    <h1>Biografía de José Carlos Mariátegui</h1>
+    <p>José Carlos Mariátegui nació en Moquegua, Perú, el 16 de julio de 1894. Desde 1914 trabajó como redactor en el periódico La Prensa y colaboró en otros medios. En 1919 fundó el diario La Razón, donde apoyó la Reforma Universitaria y las luchas obreras. Gracias a una beca, viajó por Europa y regresó a Perú en marzo de 1923. Colaboró en diversos diarios y fue profesor en la Universidad Popular González Prada. En 1924, debido a una lesión previa, le fue amputada una pierna.
+    En 1926 fundó la revista Amauta. Fue encarcelado y puesto bajo prisión domiciliaria en 1927 durante el proceso contra los comunistas. En 1928 rompió con el APRA, fundó el Partido Socialista, la revista proletaria Labor y publicó "Siete ensayos de interpretación de la realidad peruana". En 1929 fundó la Confederación de Trabajadores del Perú.
+    Murió en Lima el 16 de abril de 1930.
+    En una carta de 1927 a Enrique Espinoza, Mariátegui proporcionó un resumen de su vida: a los 14 años empezó en el periodismo y trabajó en "La Prensa", "El Tiempo" y "La Razón", apoyando la reforma universitaria. Se orientó hacia el socialismo en 1918. Viajó por Europa entre 1919 y 1923, residiendo principalmente en Italia, donde se casó. A su regreso a Perú, se dedicó a explicar la situación europea y a investigar la realidad nacional siguiendo el método marxista. A pesar de su delicada salud tras la amputación de su pierna en 1924, continuó su labor intelectual y socialista. Se consideraba un autodidacta, habiendo estudiado de manera informal en Lima y Europa.</p>
+  </div>
+  <div class="box" id="obras">
+    <h2>Obras Literarias de José Carlos Mariátegui</h2>
+    <ul>
+      <li>La escena contemporánea. Obras completas, Vol. 1.</li>
+      <li>7 ensayos de interpretación de la realidad peruana. Obras completas, Vol. 2.</li>
+      <li>El alma matinal y otras estaciones del hombre de hoy. Obras completas, Vol. 3.</li>
+      <li>La novela y la vida. Siegfried y el profesor Canella. Obras completas, Vol. 4.</li>
+      <li>Defensa del marxismo. Obras completas, Vol. 5.</li>
+      <li>El artista y la época. Obras completas, Vol. 6.</li>
+      <li>Signos y obras. Análisis del pensamiento literario contemporáneo. Obras completas, Vol. 7.</li>
+      <li>Historia de la crisis mundial. Conferencias pronunciadas en 1923. Obras completas, Vol. 8.</li>
+      <li>Poemas a Mariátegui (Compilación con prólogo de Pablo Neruda). Obras completas, Vol. 9.</li>
+      <li>José Carlos Mariátegui por María Wiesse. Obras completas, Vol. 10.</li>
+      <li>Peruanicemos al Perú. Obras completas, Vol. 11.</li>
+      <li>Temas de nuestra América. Obras completas, Vol. 12.</li>
+      <li>Ideología y política. Obras completas, Vol. 13.</li>
+      <li>Temas de educación. Obras completas, Vol. 14.</li>
+      <li>Cartas de Italia. Obras completas, Vol. 15.</li>
+      <li>Figuras y aspectos de la vida mundial. Tomos 1, 2 y 3. Obras completas, Vol. 16, 17 y 18.</li>
+      <li>Amauta y su influencia de Alberto Tauro, Obras completas, Vol. 19.</li>
+      <li>Mariátegui y su tiempo por Armando Bazán, Obras completas, Vol. 20.</li>
+    </ul>
+  </div>
+</div>
+
+<script>
+  function mostrarContenido(id) {
+    var emptyBox = document.getElementById("emptyBox");
+    var box = document.getElementById(id);
+    emptyBox.innerHTML = box.innerHTML;
+  }
+</script>
+
 </body>
 </html>

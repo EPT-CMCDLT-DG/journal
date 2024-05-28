@@ -1,47 +1,114 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Obras de César Vallejo</title>
-    <style>
-        body {
-            background-color: black;
-            color: white;
-            font-family: 'Times New Roman', Times, serif;
-            margin: 0;
-            padding: 0;
-        }
-        h1 {
-            font-weight: bold;
-            font-size: 24px;
-            text-align: left;
-            margin-left: 20px;
-            margin-top: 20px;
-        }
-        p {
-            font-size: 18px;
-            text-align: left;
-            margin-left: 20px;
-            margin-bottom: 10px;
-        }
-        a {
-            color: white;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Biografía y Obras de César Vallejo</title>
+<style>
+  body {
+    font-family: "Times New Roman", Times, serif;
+    background-color: #000;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+  }
+  .container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .box {
+    display: none;
+    width: 45%;
+    padding: 20px;
+    border: 2px solid #fff;
+    border-radius: 10px;
+  }
+  .box.active {
+    display: block;
+  }
+  .box h1, .box h2 {
+    font-weight: bold;
+    font-size: 20px;
+  }
+  .box p {
+    font-size: 16px;
+  }
+  #emptyBox {
+    display: inline-block;
+    padding: 20px;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    margin-bottom: 20px; /* Espaciado entre el recuadro y los botones */
+  }
+  .button-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+  }
+  .button {
+    display: inline-block;
+    padding: 15px 30px;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    text-decoration: none;
+    background-color: transparent;
+    color: #fff;
+    margin-right: 20px; /* Separación horizontal entre botones */
+  }
+</style>
 </head>
 <body>
-    <h1>Obras de César Vallejo</h1>
-    <p>Los heraldos negros</p>
-    <p>Trilce</p>
-    <p>Escalas melografiadas</p>
-    <p>Fabla salvaje</p>
-    <p>Hacia el reino de los Sciris</p>
-    <p>El tungsteno</p>
-    <p>Paco Yunque</p>
+
+<div id="emptyBox">empty</div>
+
+<div class="button-container">
+  <button class="button" onclick="mostrarContenido('biografia')">BIOGRAFÍA</button>
+  <button class="button" onclick="mostrarContenido('obras')">OBRAS LITERARIAS</button>
+</div>
+
+<div class="container">
+  <div class="box" id="biografia">
+    <h1>Biografía de César Vallejo</h1>
+    <p>César Abraham Vallejo Mendoza nació el 16 de marzo de 1892 en Santiago de Chuco, Perú, siendo el menor de once hermanos. Influenciado por una familia con antecedentes religiosos y una educación primaria en su ciudad natal, estudió secundaria en el colegio San Nicolás de Huamachuco. Inició estudios de Filosofía y Letras en la Universidad de Trujillo y de Derecho en la Universidad de San Marcos en Lima, pero los abandonó para trabajar como maestro en Trujillo.
+    En 1916, se unió al grupo El Norte y se trasladó a Lima, donde publicó su primer poemario, "Los heraldos negros", en 1918. Trabajó como profesor y, tras la muerte de su madre en 1920, fue injustamente encarcelado por cien días, durante los cuales escribió gran parte de "Trilce", una obra vanguardista.
+    En 1923, se trasladó a Europa, instalándose en París, donde colaboró con varias publicaciones y estableció amistades con destacados poetas como Juan Larrea, Vicente Huidobro y Pablo Neruda. En 1930, recibió una beca del gobierno español y, en 1932, se afilió al Partido Comunista Español, participando activamente en la causa republicana durante la Guerra Civil Española.
+    Se casó con Georgette Phillipart en 1934 y continuó viviendo en París, donde falleció el 15 de abril de 1938. Vallejo es reconocido como uno de los grandes innovadores de la poesía del siglo XX.</p>
+  </div>
+  <div class="box" id="obras">
+    <h2>Obras Literarias de César Vallejo</h2>
+    <ul>
+      <li>Escalas melografiadas (Lima, 1923)</li>
+      <li>Fabla salvaje (Lima, 1923)</li>
+      <li>Hacia el reino de los Sciris (terminado en 1928, publicado póstumamente)</li>
+      <li>El tungsteno (Madrid, 1931)</li>
+      <li>Paco Yunque (escrito en 1931, publicado en 1951)</li>
+      <li>Relatos inconclusos:
+        <ul>
+          <li>El niño del carrizo (1935-1936)</li>
+          <li>Viaje alrededor del porvenir (1935-1936)</li>
+          <li>Los dos soras (1935-1936)</li>
+          <li>El vencedor (1935-1936)</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<script>
+  function mostrarContenido(id) {
+    var emptyBox = document.getElementById("emptyBox");
+    var box = document.getElementById(id);
+    emptyBox.innerHTML = box.innerHTML;
+  }
+</script>
+
 </body>
 </html>

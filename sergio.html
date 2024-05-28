@@ -1,52 +1,111 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Obras de Sergio Bambarén Roggero</title>
-    <style>
-        body {
-            background-color: black;
-            color: white;
-            font-family: 'Times New Roman', Times, serif;
-            margin: 0;
-            padding: 0;
-        }
-        h1 {
-            font-weight: bold;
-            font-size: 24px;
-            text-align: left;
-            margin-left: 20px;
-            margin-top: 20px;
-        }
-        p {
-            font-size: 18px;
-            text-align: left;
-            margin-left: 20px;
-            margin-bottom: 10px;
-        }
-        a {
-            color: white;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Biografía y Obras de Sergio Bambarén</title>
+<style>
+  body {
+    font-family: "Times New Roman", Times, serif;
+    background-color: #000;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+  }
+  .container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .box {
+    display: none;
+    width: 45%;
+    padding: 20px;
+    border: 2px solid #fff;
+    border-radius: 10px;
+  }
+  .box.active {
+    display: block;
+  }
+  .box h1, .box h2 {
+    font-weight: bold;
+    font-size: 20px;
+  }
+  .box p {
+    font-size: 16px;
+  }
+  #emptyBox {
+    display: inline-block;
+    padding: 20px;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    margin-bottom: 20px; /* Espaciado entre el recuadro y los botones */
+  }
+  .button-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+  }
+  .button {
+    display: inline-block;
+    padding: 15px 30px;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    text-decoration: none;
+    background-color: transparent;
+    color: #fff;
+    margin-right: 20px; /* Separación horizontal entre botones */
+  }
+</style>
 </head>
 <body>
-    <h1>Obras de Sergio Bambarén Roggero</h1>
-    <p>El delfín la historia de un soñador</p>
-    <p>Pensamientos a la orilla del mar</p>
-    <p>Vela Blanca</p>
-    <p>La playa de los sueños</p>
-    <p>Iris (2000)</p>
-    <p>Samanta</p>
-    <p>El guardián de la luz</p>
-    <p>Desde las estrellas</p>
-    <p>Ángeles del océano</p>
-    <p>La historia de la mula y la estrella de mar</p>
-    <p>La música del silencio</p>
-    <p>La aventura del mar de la película...</p>
+
+<div id="emptyBox">empty</div>
+
+<div class="button-container">
+  <button class="button" onclick="mostrarContenido('biografia')">BIOGRAFÍA</button>
+  <button class="button" onclick="mostrarContenido('obras')">OBRAS LITERARIAS</button>
+</div>
+
+<div class="container">
+  <div class="box" id="biografia">
+    <h1>Biografía de Sergio Bambarén</h1>
+    <p>Sergio Bambarén Roggero, hijo de Carlos Bambarén Vigil y Olga Roggero Barreda. Nació en Lima, Perú, el 1 de diciembre de 1960. Desde sus primeros años quedó cautivado por el océano. Su espíritu de aventura lo llevó a Estados Unidos, donde estudió y se graduó como Ingeniero Químico en la Universidad de Texas A&M. Luego de esto, decide emigrar a Sídney, Australia, donde trabajó en el director ejecutivo de una corporación de un millón de dólares. Después viajó a Europa y fue en Portugal donde escribe su primer libro; "El Delfín, la historia de un soñador" en 1997 fueron unos de sus grandes éxitos. A su regreso a Australia recibe una propuesta de Random House para publicar su libro. Sin embargo, no aceptó pues la editorial le exigía cambios al texto. Así es como en 1996, el autor decide publicar el libro él mismo; Sergio ha escrito veinticinco novelas y vendido más de veinte millones de ejemplares en el mundo. Sus novelas han sido traducidas en más de 40 idiomas.
+    Posteriormente coordinaría con la agencia productora de películas Helliventures, en Múnich, para llevar al cine sus novelas El Delfín la historia de un soñador y El guardián de la luz. Es Presidente de la Asociación Ecológica DELPHIS.</p>
+  </div>
+  <div class="box" id="obras">
+    <h2>Obras Literarias de Sergio Bambarén</h2>
+    <ul>
+      <li>El delfín la historia de un soñador</li>
+      <li>Pensamientos a la orilla del mar</li>
+      <li>Vela Blanca</li>
+      <li>La playa de los sueños</li>
+      <li>Iris (2000)</li>
+      <li>Samanta</li>
+      <li>El guardián de la luz</li>
+      <li>Desde las estrellas</li>
+      <li>Ángeles del océano</li>
+      <li>La historia de la mula y la estrella de mar</li>
+      <li>La música del silencio</li>
+      <li>La aventura del mar de la película</li>
+    </ul>
+  </div>
+</div>
+
+<script>
+  function mostrarContenido(id) {
+    var emptyBox = document.getElementById("emptyBox");
+    var box = document.getElementById(id);
+    emptyBox.innerHTML = box.innerHTML;
+  }
+</script>
+
 </body>
 </html>

@@ -1,46 +1,105 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Obras de José María Arguedas</title>
-    <style>
-        body {
-            background-color: black;
-            color: white;
-            font-family: 'Times New Roman', Times, serif;
-            margin: 0;
-            padding: 0;
-        }
-        h1 {
-            font-weight: bold;
-            font-size: 24px;
-            text-align: left;
-            margin-left: 20px;
-            margin-top: 20px;
-        }
-        p {
-            font-size: 18px;
-            text-align: left;
-            margin-left: 20px;
-            margin-bottom: 10px;
-        }
-        a {
-            color: white;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Biografía y Obras de José María Arguedas</title>
+<style>
+  body {
+    font-family: "Times New Roman", Times, serif;
+    background-color: #000;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+  }
+  .container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .box {
+    display: none;
+    width: 45%;
+    padding: 20px;
+    border: 2px solid #fff;
+    border-radius: 10px;
+  }
+  .box.active {
+    display: block;
+  }
+  .box h1, .box h2 {
+    font-weight: bold;
+    font-size: 20px;
+  }
+  .box p {
+    font-size: 16px;
+  }
+  #emptyBox {
+    display: inline-block;
+    padding: 20px;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  .button-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+  }
+  .button {
+    display: inline-block;
+    padding: 15px 30px;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    text-decoration: none;
+    background-color: transparent;
+    color: #fff;
+    margin-right: 20px;
+  }
+</style>
 </head>
 <body>
-    <h1>Obras de José María Arguedas</h1>
-    <p>Yawar fiesta</p>
-    <p>Diamantes y pedernales</p>
-    <p>Los ríos profundos</p>
-    <p>El Sexto</p>
-    <p>Todas las sangres</p>
-    <p>El zorro de arriba y el zorro de abajo</p>
+
+<div id="emptyBox">empty</div>
+
+<div class="button-container">
+  <button class="button" onclick="mostrarContenido('biografia')">BIOGRAFÍA</button>
+  <button class="button" onclick="mostrarContenido('obras')">OBRAS LITERARIAS</button>
+</div>
+
+<div class="container">
+  <div class="box" id="biografia">
+    <h1>Biografía de José María Arguedas</h1>
+    <p>José María Arguedas Altamirano nació el 18 de enero de 1911 en Andahuaylas, Perú. Hijo de un abogado cusqueño y una hacendada andahuaylina, quedó huérfano de madre a los tres años. Su padre se volvió a casar en 1917 y la familia se trasladó a Puquio y luego a San Juan de Lucanas. Debido a problemas políticos, su padre perdió su puesto como juez y trabajó como abogado itinerante, dejando a José María al cuidado de su madrastra, quien lo trataba como sirviente. Esta experiencia lo acercó a los indios quechuas, con quienes compartió su vida y aprendió sus costumbres. En 1921, escapó con su hermano Arístides a la hacienda Viseca, donde vivió dos años hasta que su padre los recogió y se establecieron en Abancay. Arguedas cursó la secundaria en Ica y Huancayo, donde empezó a escribir. Ingresó a la Universidad de San Marcos a los veinte años para estudiar Letras y continuó su carrera literaria. Entre 1932 y 1937 trabajó en la Administración Central de Correos de Lima, pero fue encarcelado por participar en una manifestación a favor de la República Española. En 1939 se casó con Celia Bustamante y trabajó como profesor en Sicuani, recopilando folclore con sus alumnos. Al regresar a Lima, continuó enseñando en varias escuelas. En 1941, fue agregado al Ministerio de Educación para reformar los planes de estudios secundarios. Representó a Perú en el Congreso Indigenista Interamericano de Patzcuaro en 1942 y fue cesado en 1949 por considerársele comunista. En 1947 fue nombrado Conservador General de Folklore y en 1950 Jefe de la Sección Folklore, Bellas Artes y Despacho del Ministerio de Educación. En 1953, fue nombrado Jefe del Instituto de Estudios Etnológicos del Museo de la Cultura Peruana y comenzó a publicar la revista "Folklore Americano", que dirigió por diez años. Posteriormente, dirigió la Casa de la Cultura del Perú y el Museo Nacional de Historia. También fue profesor en varias instituciones, incluyendo la Universidad Nacional Agraria de la Molina. En 1965 se divorció y se casó con Sybila Arredondo en 1967. El 28 de noviembre de 1969, se disparó en la cabeza en su oficina de La Molina y falleció el 2 de diciembre. La obra de Arguedas comprende tanto ficción como ensayos sobre el idioma quechua, mitología prehispánica, folclore y educación popular. Su educación en dos tradiciones culturales le permitió describir la realidad indígena de manera única. Su obra cumbre, "Todas las sangres", eleva el problema indígena a un conflicto nacional y universal.</p>
+  </div>
+  <div class="box" id="obras">
+    <h2>Obras Literarias de José María Arguedas</h2>
+    <ul>
+      <li>1941: Yawar fiesta. Revisada en 1958.</li>
+      <li>1954: Diamantes y pedernales. Editada conjuntamente con una reedición del libro Agua y el cuento «Orovilca».</li>
+      <li>1958: Los ríos profundos. Premio Nacional de Fomento a la Cultura Ricardo Palma en 1959. Fue reeditada en 1978 por la Biblioteca Ayacucho de Caracas con prólogo de Mario Vargas Llosa.</li>
+      <li>1961: El Sexto. Premio Nacional de Fomento a la Cultura Ricardo Palma en 1962.</li>
+      <li>1964: Todas las sangres.</li>
+      <li>1971: El zorro de arriba y el zorro de abajo, novela inconclusa y que fue publicada póstumamente.</li>
+    </ul>
+  </div>
+</div>
+
+<script>
+  function mostrarContenido(id) {
+    var emptyBox = document.getElementById("emptyBox");
+    var box = document.getElementById(id);
+    emptyBox.innerHTML = box.innerHTML;
+    emptyBox.style.display = "inline-block";
+  }
+</script>
+
 </body>
 </html>

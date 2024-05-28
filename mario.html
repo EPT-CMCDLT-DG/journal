@@ -40,11 +40,11 @@
     font-size: 16px;
   }
   #emptyBox {
-    width: 45%;
+    display: inline-block;
     padding: 20px;
     border: 2px solid #fff;
     border-radius: 10px;
-    margin-bottom: 20px; /* Espaciado entre el recuadro y los botones */
+    margin-bottom: 20px;
   }
   .button-container {
     display: flex;
@@ -61,7 +61,7 @@
     text-decoration: none;
     background-color: transparent;
     color: #fff;
-    margin-right: 20px; /* Separación horizontal entre botones */
+    margin-right: 20px;
   }
 </style>
 </head>
@@ -77,11 +77,7 @@
 <div class="container">
   <div class="box" id="biografia">
     <h1>Biografía de Mario Vargas Llosa</h1>
-    <p>Mario Vargas Llosa nació en Arequipa, Perú, en 1936. Fue el único hijo de Ernesto Vargas Maldonado y Dora Llosa Ureta, quienes se separaron poco antes de su nacimiento y posteriormente se divorciaron. Su padre reveló tener una relación con una mujer alemana, resultando en dos medios hermanos menores del escritor. Por línea materna, desciende del maestre de campo vizcaíno Juan de la Llosa y Llaguno, quien se estableció en Arequipa en 1702.
-Vivió en Arequipa hasta los nueve años, cuando su abuelo se trasladó con la familia a Bolivia. Posteriormente regresaron a Perú, donde continuó sus estudios en Piura y Lima. Su relación con su padre fue complicada y marcó su vida. A los 14 años ingresó al Colegio Militar Leoncio Prado, donde experimentó una férrea disciplina militar que influyó en su desarrollo literario. Comenzó su carrera literaria y periodística a una edad temprana, publicando relatos y trabajando como periodista en diversos medios. Estudió Derecho y Literatura en la Universidad Nacional Mayor de San Marcos, participando activamente en la política estudiantil. En 1955 contrajo matrimonio por primera vez y comenzó a escribir de forma seria.
-En 1960 se trasladó a Francia, donde escribió su primera novela, "La ciudad y los perros". Durante esta época, se involucró en la política y simpatizó inicialmente con la revolución cubana. Sin embargo, se distanció del régimen cubano en 1967.
-En 1971 obtuvo un doctorado en Filosofía y Letras en la Universidad Complutense de Madrid. A lo largo de su carrera, ha recibido numerosos premios y reconocimientos, incluido el Premio Miguel de Cervantes en 1994. Vargas Llosa ha sido miembro de la Real Academia Española y ha ejercido como periodista deportivo durante el Mundial de Fútbol de 1982. Se ha casado en dos ocasiones y tiene varios hijos. En 2019 anunció su retiro del PEN Club Internacional debido a su postura sobre el independentismo catalán.
-El 17 de diciembre de 2023, publicó su última columna, anunciando su retiro oficial del periodismo.</p>
+    <p>Mario Vargas Llosa nació en Arequipa, Perú, en 1936. Fue el único hijo de Ernesto Vargas Maldonado y Dora Llosa Ureta, quienes se separaron poco antes de su nacimiento y posteriormente se divorciaron. Su padre reveló tener una relación con una mujer alemana, resultando en dos medios hermanos menores del escritor. Por línea materna, desciende del maestre de campo vizcaíno Juan de la Llosa y Llaguno, quien se estableció en Arequipa en 1702. Vivió en Arequipa hasta los nueve años, cuando su abuelo se trasladó con la familia a Bolivia. Posteriormente regresaron a Perú, donde continuó sus estudios en Piura y Lima. Su relación con su padre fue complicada y marcó su vida. A los 14 años ingresó al Colegio Militar Leoncio Prado, donde experimentó una férrea disciplina militar que influyó en su desarrollo literario. Comenzó su carrera literaria y periodística a una edad temprana, publicando relatos y trabajando como periodista en diversos medios. Estudió Derecho y Literatura en la Universidad Nacional Mayor de San Marcos, participando activamente en la política estudiantil. En 1955 contrajo matrimonio por primera vez y comenzó a escribir de forma seria. En 1960 se trasladó a Francia, donde escribió su primera novela, "La ciudad y los perros". Durante esta época, se involucró en la política y simpatizó inicialmente con la revolución cubana. Sin embargo, se distanció del régimen cubano en 1967. En 1971 obtuvo un doctorado en Filosofía y Letras en la Universidad Complutense de Madrid. A lo largo de su carrera, ha recibido numerosos premios y reconocimientos, incluido el Premio Miguel de Cervantes en 1994. Vargas Llosa ha sido miembro de la Real Academia Española y ha ejercido como periodista deportivo durante el Mundial de Fútbol de 1982. Se ha casado en dos ocasiones y tiene varios hijos. En 2019 anunció su retiro del PEN Club Internacional debido a su postura sobre el independentismo catalán. El 17 de diciembre de 2023, publicó su última columna, anunciando su retiro oficial del periodismo.</p>
   </div>
   <div class="box" id="obras">
     <h2>Obras Literarias de Mario Vargas Llosa</h2>
@@ -115,6 +111,7 @@ El 17 de diciembre de 2023, publicó su última columna, anunciando su retiro of
     var emptyBox = document.getElementById("emptyBox");
     var box = document.getElementById(id);
     emptyBox.innerHTML = box.innerHTML;
+    emptyBox.style.display = "inline-block";
   }
 </script>
 
