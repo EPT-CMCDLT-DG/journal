@@ -3,45 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grupo de Diseño Gráfico en EPT</title>
+    <title>NOSOTROS</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: bold;
             margin: 0;
             padding: 0;
             background-color: #000;
-            color: #fff;
+            color: #fff; /* Color del texto blanco */
+            overflow-x: hidden; /* Evita el desplazamiento horizontal */
         }
         .container {
-            margin: 30px auto; /* Centrar el contenedor con un margen de 30px */
-            max-width: 800px; /* Opcional: para limitar el ancho del contenedor */
-            padding: 0 20px; /* Opcional: añadir relleno a los lados */
+            max-width: 100%; /* Ajusta al ancho completo del viewport */
+            padding: 20px; /* Añadir relleno uniforme */
+            box-sizing: border-box; /* Incluye el padding en el ancho total */
         }
         h1, h2 {
             color: #fff;
         }
-        p {
-            color: #ddd;
+        .team-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between; /* Distribuye los elementos uniformemente */
+            margin-top: 20px;
+        }
+        .team-member {
+            text-align: center;
+            margin-bottom: 20px; /* Espacio entre filas */
+            flex-basis: calc(33.33% - 20px); /* Ancho de cada columna con margen */
+            box-sizing: border-box; /* Incluye el margen en el ancho total */
+        }
+        .team-member img {
+            width: 100%; /* Ocupa el 100% del ancho del contenedor */
+            height: auto; /* Altura automática para mantener la proporción */
+        }
+        .team-member p {
+            margin: 5px 0;
+            font-size: 12px; /* Tamaño de fuente más pequeño */
         }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <h1>Grupo de Diseño Gráfico en EPT</h1>
-    <p>Bienvenidos al grupo de diseño gráfico de la I.E.T CORONEL MANUEL CAMILO DE LA TORRE..</p>
-    
-    <h2>Misión</h2>
-    <p>Nuestra misión es proporcionar a nuestros miembros una plataforma donde puedan desarrollar sus habilidades en diseño gráfico, explorar su creatividad y aplicar sus conocimientos en proyectos prácticos.</p>
-    
-    <h2>Visión</h2>
-    <p>Buscamos convertirnos en un referente en el ámbito del diseño gráfico, tanto a nivel local como nacional, destacando por nuestra calidad, innovación y contribución al desarrollo de la comunidad.</p>
-    
-    <h2>Actividades</h2>
-    <p>Nuestro grupo organiza una variedad de actividades, que incluyen talleres, charlas, concursos y proyectos colaborativos. Nos enfocamos en temas como diseño de identidad visual, diseño web, ilustración, animación, entre otros.</p>
-    
-    <h2>Únete a Nosotros</h2>
-    <p>Si compartes nuestra pasión por el diseño gráfico y deseas formar parte de nuestra comunidad, ¡no dudes en unirte a nosotros! Todos son bienvenidos, sin importar su nivel de experiencia.</p>
+    <h1>GRUPO N°2<br>
+    EPT-DISEÑO GRAFICO<br>
+I.E: CORONEL MANUEL CAMILO DE LA TORRE</h1>
+
+    <div class="team-container">
+        <div class="team-member">
+            <img src="img/jm.jpeg" alt="José María Eduardo Reinoso Chambilla">
+            <p>Gerente general: José María Eduardo Reinoso Chambilla</p>
+        </div>
+        <div class="team-member">
+            <img src="img/ax.jpeg" alt="Aixa Saeli Ale Callo">
+            <p>Sub gerente general: Aixa Saeli Ale Callo</p>
+        </div>
+        <div class="team-member">
+            <img src="img/reyder.jpg" alt="Reyder Adler Quispe Cori">
+            <p>Gerente de marketing: Reyder Adler Quispe Cori</p>
+        </div>
+        <div class="team-member">
+            <img src="img/nt.jpeg" alt="Natanyel Nina Mamani">
+            <p>Gerente de producción: Natanyel Nina Mamani</p>
+        </div>
+        <div class="team-member">
+            <img src="img/ax.jpeg" alt="Alexis Leandro Puma Mamani">
+            <p>Gerente de finanzas: Alexis Leandro Puma Mamani</p>
+        </div>
+        <div class="team-member">
+            <img src="img/wn.jpeg" alt="Winy Coaquira Mamani">
+            <p>Gerente de logística: Winy Coaquira Mamani</p>
+        </div>
+    </div>
+    <footer>
+        <h2>I.E: CORONEL MANUEL CAMILO DE LA TORRE<br>UGEL MARISCAL NIETO - MOQUEGUA</h2>
+    </footer>
 </div>
 
 </body>
